@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../overlay.css">
+</head>
+<body>
+    <div class="overlay">
+        <div class="alert-box">
+            <div class="dialogue-head">
+                Acknowledge This Message
+            </div>
+            <div class="dialogue-body"></div>
+            <div class="dialogue-footer">
+                <button class="overlay-btn">OK</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="first-page">
+
+            <h1 class="first-page-heading">Quiz Time!</h1>
+
+            <div class="user-details">
+                <div class="enter-details">
+                    Ready for a quiz?
+                    Please enter your name below:
+                </div>
+                <div class="firstname">
+                    <label for="firstname">
+                    Firstname:
+                    </label>
+                    <input type="text" name="firstname" id="firstname"
+                    class="firstname">    
+                </div>
+            
+                <div class="lastname">
+                    <label for="lastname">
+                        lastname:
+                    </label>
+                    <input type="text" name="lastname" id="lastname"
+                    class="lastname">
+                </div>
+            </div>
+            <div class="start-btn">
+                <button>Start Quiz</button>
+            </div>
+
+        </div>
+        <div class="intermediary-page">
+            <div>Hi
+                <span class="input-name">Daniel</span> 
+                , your quiz starts in:
+            </div>
+            
+            <div class="countdown">
+               5
+            </div>
+            Goodluck!
+        </div>
+
+        <div class="second-page">
+            <div class="time-left">
+                <div class="time-left-text">
+                    Time Left
+                </div>
+                <div class="time-left-figure">
+                 <span class="mins-left">15</span>:
+                  <span class="secs-left">00 </span>  
+                </div>
+            </div>
+            <div class="question-section">
+              <div class="progress">
+                  <span class="question-number">
+                      1
+                  </span>/
+                  <span class="total-number">
+                      1
+                  </span>
+              </div>
+              <div class="question">
+                  What is the most captivating thing you have seen
+                  this year?
+              </div>
+              <div class="options">
+                  <div class="a select-option ">
+                      <div class="select w">
+
+                      </div>
+                      <span class="option">
+                        The moon  
+                      </span>
+                        
+                  </div>
+                  <div class="b select-option">
+                      <div class="select x">
+
+                      </div>
+                      <span class="option">
+                        The moon been a very beautiful sight to 
+                        behold blew my mind away that I stood 
+                        speechless for a good amount of time
+                      </span>      
+                  </div>
+                  <div class="c select-option">
+                      <div class="select y">
+
+                      </div>
+                      <span class="option">
+                        The moon  
+                      </span>
+                        
+                  </div>
+                  <div class="d select-option">
+                      <div class="select z">
+
+                      </div>
+                      <span class="option">
+                        The sea  
+                      </span>
+                        
+                  </div>
+              </div>
+            </div>
+            <div class="buttons-below">
+                <div class="next-question-btn">
+                    <button>
+                        Next
+                    </button>
+                </div>
+                <div class="end-quiz-btn">
+                    <button>
+                        End Quiz
+                    </button>
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="third-page">
+            <p >
+                <span class="thank-you">
+                 Thank you for trying
+            </span>
+                <div class="users-score">
+                    click here to see your score
+                </div>
+            </p>
+            <button class="try-again">Try Again</button>
+
+        </div>
+
+    </div>  
+     
+     
+<script src="./script.js"></script>
+</body>
+<!-- use a background image of quiz like picture- whatever 
+that means -->
+</html>

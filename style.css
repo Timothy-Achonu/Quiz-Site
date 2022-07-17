@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --soft-red:hsl(7, 90%, 70%);
+    --yellow:hsl(53, 100%, 49%);
+    --dark-sat-cyan:hsl(167, 40%, 24%);
+    --dark-blue-photo-text: hsl(198, 62%, 26%);
+    --light-moderate-cyan: hsl(180, 34%, 70%);
+    --drk-moderate-cyan: hsl(168, 34%, 41%);
+    /* hsl(168, 34%, 41%) */
+    --dark-sat-blue: hsl(212, 27%, 19%);
+    --very-drk-grayish-blue: hsl(213, 9%, 39%);
+    --drk-grayish-blue: hsl(232, 9%, 55%;);
+    --grayish-blue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --upper-blue: rgba(61,190,255,255);
+}
+
+.container {
+    font-family: 'oswald';
+    background: url(./images/girl-with-red-hat-h-6w7HwZRdg-unsplash.jpg)
+    no-repeat center center/cover;
+    min-height: 100vh;
+    /* height: fit-content; */
+    /* width: 390px; */
+    /* background: yellow; */
+    padding: 0px 0;
+}
+
+.first-page-heading {
+    font-family: 'Fraunces';
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+    font-size: 6.5rem;
+}
+
+.user-details {
+    background-color: hsla(39, 100%, 50%, 0.4);
+    color: black;
+    /* height: 20rem; */
+    font-size: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 90%;
+    padding: 20px 20px;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+.user-details > .enter-details {
+    /* background-color: yellow; */
+    width: 100%;
+    margin-bottom: 30px;
+}
+.user-details input {
+    width: 200px;
+    height: 40px;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 6px;
+    margin-left: 10px;
+}
+.user-details > div {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: center;
+  /* background-color: yellow; */
+  width: 45%;
+}
+.user-details > .firstname {
+    margin-bottom: 20px;
+}
+
+.start-btn {
+    margin:0 auto;
+    width: fit-content;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start-btn > button {
+    /* height: 60px; */
+    /* width: 90px; */
+    font-size: 1.9rem;
+    padding: 20px;
+    background-color: orange;
+    color: white;
+    border-color: orange;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Fraunches';
+    font-weight:900;
+
+    transition: background-color 800ms ease-in-out,
+    border-color 800ms ease-in-out;
+}
+.start-btn > button:hover {
+    background-color: green;
+    border-color: green;
+}
+.first-page {
+    /* z-index: 6; */
+    opacity: 1;
+    z-index: 3;
+    padding-bottom: 20px;
+    /* display: none; */
+
+}
+.first-page.hide {
+   opacity: 0;
+   z-index: -2;
+   display: none;
+}
+
+/* INTERMIDIARY PAGE */
+.intermediary-page {
+    /* z-index: -1; */
+    /* opacity: 1; */
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fraunces';
+    font-size: 3.5rem;
+    padding: 0 40px;
+    text-align: center;
+    display: none;
+}
+.intermediary-page.show {
+    opacity: 1;
+    z-index: 1;
+    display: flex;
+    position: static;
+}
+
+
+
+/* SECOND PAGE */
+.second-page {
+    display: none;
+    opacity: 0;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 0px;
+    padding-bottom: 20px;
+    width: 95%;
+    z-index: -1;
+    /* background-color: yellow; */
+}
+.second-page.show {
+    opacity: 1;
+    z-index: 2;
+    display: block;
+    position: static;
+}
+
+.second-page > .time-left {
+    text-align: end;
+    font-size: 2.4rem;
+    word-spacing: 9px;
+
+}
+.second-page > .time-left .time-left-figure {
+    word-spacing: -6px;
+}
+.second-page > .question-section {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%, 0.5);
+    border-radius: 40px;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: fit-content;
+    padding: 20px 30px;
+}
+.second-page > .question-section > .question-number {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+.second-page > .question-section > .question {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.second-page > .question-section > .options {
+    padding-left: 20px;
+}
+.second-page > .question-section > .options > div{
+  display: flex;
+  justify-content: start;
+  /* flex-wrap: wrap; */
+  align-items: flex-start;
+  margin-top: 10px;
+  cursor: pointer;
+}
+/* .second-page > .question-section > .options > 
+div:hover {
+    background-color: yellow;
+} */
+.second-page > .question-section > .options > div 
+> span {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.second-page > .question-section > .options .select {
+  width: 20px;
+  height: 20px;
+  border: 4px solid gray;
+  border-radius: 50%;
+  background-color: inherit;
+  margin-right: 5px;
+}
+.second-page > .question-section > .options > 
+div.color-blue > .select {
+  background-color: blue;
+}
+.second-page > .buttons-below{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+.second-page > .buttons-below > .end-quiz-btn > button{
+    padding: 10px 10px;
+    background-color: hsl(0, 100%, 50%,0.3);
+    border-color: hsl(0, 100%, 50%,0.3);
+    cursor: pointer;
+    color: white;
+    border-radius: 13px;
+}
+.second-page > .buttons-below > .end-quiz-btn > 
+button:hover {
+    background-color: red;
+    border-color: red;
+}
+.second-page > .buttons-below > .next-question-btn {
+    order: 1;
+}
+.second-page > .buttons-below > .next-question-btn.hide {
+    display: none;
+}
+.second-page > .buttons-below > .next-question-btn > 
+button {
+   padding: 10px 20px;
+   background-color: hsl(240, 100%, 50%,0.3);
+   color: white;
+   cursor: pointer;
+   border-radius: 13px;
+   border-color: hsl(240, 100%, 50%,0.3);
+}
+.second-page > .buttons-below > .next-question-btn > 
+button:hover {
+    background-color: hsl(240, 100%, 50%);
+    border-color: hsl(240, 100%, 50%);
+}
+
+.third-page {
+    width: 100%;
+    text-align: center;
+    font-size: 3.6rem;
+    font-weight: 900;
+    font-family: 'Fraunches';
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+    display: none;
+}
+.third-page.show {
+    display: flex;
+}
+.third-page > .try-again {
+    margin:0 auto;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: green;;
+    font-size: 1.2rem;
+    border-color: #abff2e80;
+    font-weight: bold;
+    color: white;
+    width: fit-content;
+
+    transition: box-shadow 300ms ease-in-out;
+}
+
+.third-page > .try-again:hover {
+    background-color: green;
+    color: white;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.third-page .users-score {
+    font-size: 1rem;
+    background-color: hsl(60, 100%, 50%,0.5);
+    margin: 15px;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.third-page .users-score:hover {
+    background-color: yellow;
+}
+
+/* 
+End quiz would be the third page */
+
+/* 
+Daniel, your quiz starts in 
+5,4,3,2,1
+Goodluck!
+*/
