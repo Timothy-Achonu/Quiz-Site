@@ -28,9 +28,10 @@ const AlertUser = new customAlert();
 const firstname = document.querySelector('#firstname');
 const lastname = document.querySelector('#lastname');
 const userNameInputed = document.querySelector('.input-name');
-{/* <div class="countdown">
-5
-</div> */}
+
+let capsFirstname = "";
+let capsLastname = "";                   
+
 //counting down before quiz starts
 let i = 0;
 const countdown = document.querySelector('.countdown')
@@ -57,7 +58,13 @@ function startQuizFunc() {
        return;
    }
     firstPage.classList.add('hide');
-    userNameInputed.innerText = firstname.value;
+     capsFirstname = firstname.value.split('')[0].
+     toUpperCase() + firstname.value.substring(1) ;
+
+     capsLastname = lastname.value.split('')[0].
+     toUpperCase() + lastname.value.substring(1) ;
+
+    userNameInputed.innerText = capsFirstname;
     i = 5;
     countdown.innerText = i;
     intermediaryPage.classList.add('show');
@@ -143,7 +150,7 @@ const questionsArray = [
       answer: "Brazil",
     },
     { 
-      number: 5,
+      number: 6,
       question: "Which Netflix show had the most streaming views in 2021?",
       options:
       [ "Army Of The Dead",
@@ -153,7 +160,7 @@ const questionsArray = [
       answer: "Squid Game",
     },
     { 
-      number: 6,
+      number: 7,
       question: "Acrophobia is a fear of?",
       options:
       [ "Spiders",
@@ -163,7 +170,7 @@ const questionsArray = [
       answer: "Height",
     },
     { 
-      number: 7,
+      number: 8,
       question: "Which country has the most islands?",
       options:
       [ "Sweden",
@@ -173,7 +180,7 @@ const questionsArray = [
       answer: "Sweden",
     },
     { 
-      number: 8,
+      number: 9,
       question: "Which country was Elon Musk born?",
       options:
       [ "USA",
@@ -183,7 +190,7 @@ const questionsArray = [
       answer: "South Africa",
     },
     { 
-      number: 9,
+      number: 10,
       question: "On what continent would you find the world's largest desert?",
       options:
       [ "Antarctica",
@@ -193,7 +200,7 @@ const questionsArray = [
       answer: "Antarctica",
     },
     { 
-      number: 10,
+      number: 11,
       question: "On what continent would you find the city of Baku?",
       options:
       [ "South America",
@@ -203,8 +210,8 @@ const questionsArray = [
       answer: "Asia",
     },
     { 
-      number: 11,
-      question: "What was the first name Argentinian soccer star Maradona?",
+      number: 12,
+      question: "What was the first name of Argentinian soccer star Maradona?",
       options:
       [ "Luiz",
       "Messi",
@@ -213,7 +220,7 @@ const questionsArray = [
       answer: "Diego",
     },
     { 
-      number: 12,
+      number: 13,
       question: "Who was the Ancient Greek God of the Sun?",
       options:
       ["Apollo",
@@ -223,7 +230,7 @@ const questionsArray = [
       answer: "Apollo",
     },
     { 
-      number: 13,
+      number: 14,
       question: "Which football club is the best in the world?",
       options:
       ["Chelsea",
@@ -238,7 +245,7 @@ const questionsArray = [
 //Begin Quiz
 let p = 0; //QuestionsArray index
 function beginQuiz()  {
-    mins = 10;
+    mins = 2;
     secs = 60;
     minsLeft.innerText = mins;
     if(mins < 10) {
@@ -340,8 +347,8 @@ function endQuizFunc() {
     if(finalChoice === questionsArray[p].answer) {
         points++
     }
-    thankyou.innerText = `${firstname.value} ${lastname.
-        value}, thank you for trying.`;
+    thankyou.innerText = `${capsFirstname} ${capsLastname}, 
+    thank you for trying.`;
     // your time is up message, if the time elapses
 }
 function endQuizFunc2() {
@@ -352,8 +359,7 @@ function endQuizFunc2() {
         points++
     }
     thankyou.innerText = `Time Exausted.
-    ${firstname.value} ${lastname.
-        value}, thank you for trying.`;
+    ${capsFirstname} ${capsLastname}, thank you for trying.`;
     // your time is up message, if the time elapses
 }
 

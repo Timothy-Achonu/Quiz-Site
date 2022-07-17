@@ -198,7 +198,7 @@
     border-radius: 40px;
     margin: 0 auto;
     margin-top: 40px;
-    width: fit-content;
+    width: 100%;
     padding: 20px 30px;
 }
 .second-page > .question-section > .question-number {
@@ -219,6 +219,7 @@
   align-items: flex-start;
   margin-top: 10px;
   cursor: pointer;
+  width: fit-content;
 }
 /* .second-page > .question-section > .options > 
 div:hover {
