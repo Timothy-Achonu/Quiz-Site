@@ -323,12 +323,14 @@ button:hover {
 }
 
 .third-page .users-score {
-    font-size: 1rem;
+    font-size: 1.3rem;
     background-color: hsl(60, 100%, 50%,0.5);
     margin: 15px;
     padding: 13px;
     border-radius: 25px;
     cursor: pointer;
+    font-weight: 900;
+    font-family: 'Fraunces';
 }
 .third-page .users-score:hover {
     background-color: gold;
